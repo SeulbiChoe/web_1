@@ -1,0 +1,301 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+html,body {
+    width: 100%;
+    height: 100%;
+}
+/* 부트스트랩 버튼 클릭 테두리 없애기 */
+button:active, button:focus {
+    outline:none !important;
+    box-shadow:none !important;
+}
+input[type="checkbox" i] {
+    width: 16px;
+    height: 16px;
+}
+#wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+header {
+    height: 4em;
+}
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav img {
+    height: 45px;
+}
+nav > div > button {
+    width: 20px;
+    height: 15px;
+    position: relative;
+}
+nav > div > button span {
+    width: 20px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #555;
+    position: absolute;
+}
+nav > div > button span:first-child {
+    top: 0;
+    left: 0;
+}
+nav > div > button span:nth-child(2) {
+    top: 6px;
+    left: 0;
+}
+nav > div > button span:last-child {
+    bottom: 0;
+    left: 0;
+}
+.menu-open {
+    right: 0 !important;
+}
+.menu {
+    width: 70%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    box-shadow: -10px 0px 10px -15px #333;   
+    background-color: #fff;
+    font-weight: 500;
+    transition: right 0.6s;
+}
+.menu a {
+    color: #000;
+}
+nav .active {
+    color: #095589 !important;
+}
+.menu-header {
+    height: 4em;
+    background-color: #f2f2f2;
+}
+.menu-header button {
+    width: 50px;
+    height: 30px;
+    position: relative;
+}
+.menu-header button span {
+    width: 22px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transform: rotate(45deg);
+}
+.menu-header button span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+/* 메인 콘텐츠 영역 */
+#container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5em;
+}
+.order-wrap div {
+    background-color: #f2f2f2;
+}
+.order-active {
+    background-color: #555 !important;
+    color: #fff;
+}
+/* 탭 디자인 */
+.search ul li {
+    list-style: none;
+}
+.search ul li button {
+    background-color: #fff;
+    color: #000 !important;
+}
+.search .nav-item .active {
+    background-color: #f2f2f2;
+}
+.tab-content .active {
+    background-color: #f2f2f2;
+}
+/* 캘린더 */
+.calendar-wrap {
+    width: 100%;
+    height: auto;
+}
+/* 달력 */
+.none {
+    background-color: #ddd !important;
+}
+.sec_cal {
+    width: 100%;
+    margin: 0 auto;
+}
+.cal-header {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.sec_cal .cal_wrap {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+.sec_cal .cal_wrap .dates {
+    display: flex;
+    flex-wrap: nowrap;
+    width: auto;
+    height: auto
+}
+.sec_cal .cal_wrap .day {
+    width: 120px;
+    height: 120px;
+    padding: 1em;
+    color: #555;
+    border-radius:5px;
+    flex: 0 0 auto;
+    margin-right: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+.current.today {
+    background: rgba(255, 208, 53, 0.74) !important;
+}
+/* .sec_cal .cal_wrap .day:nth-child(7n -2) {
+    color: #3c6ffa;
+}
+.sec_cal .cal_wrap .day:nth-child(7n) {
+    color: #ed2a61;
+} */
+/* 목록 */
+.input-wrap {
+    width: 100%;
+    height: auto;
+}
+.input-wrap form div label span {
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-wrap button {
+    background-color: #095589;
+    font-weight: 500;
+}
+/* DatePicker 커스텀 */
+.datepicker .datepicker-days td, .datepicker .datepicker-days th {
+    width: 30px !important;
+    height: 30px !important;
+}
+.datepicker-dropdown {
+    font-size: 0.9em !important;
+    padding: 8px !important;
+}
+.datepicker table tr td span.active.active {
+    background-color: #095589 !important;
+    color: #fff !important;
+    background-image: none !important;
+}
+.datepicker .datepicker-days table tr td.active.active {
+    background-color: #095589 !important;
+    color: #fff !important;
+    background-image: none !important;
+}
+.contents {
+    height: auto;
+}
+.contents-inner {
+    background-color: #eee;
+    transition: box-shadow 0.4s;
+}
+.contents-inner:hover {
+    box-shadow: 0px 2px 7px 3px rgba(85, 85, 85, 0.4);
+}
+.contents img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+.contents button {
+    background-color: #095589;
+}
+/* 모달 커스텀 */
+.reserve-modal,
+.login-modal {
+    max-width: 400px !important;
+    border-radius: 0 !important;
+}
+.modal-footer button:first-child {
+    color: #095589;
+    border: 1px solid #095589;
+}
+.modal-footer button:last-child {
+    color: #555;
+    border: 1px solid #555;
+}
+.login-btn button {
+    color: #095589;
+    border: 1px solid #095589;
+}
+/* 푸터 */
+footer {
+    width: 100%;
+    background-color: #383838;
+    font-size: 0.9em;
+}
+footer > div:nth-child(2) {
+    background-color: #333;
+}
+footer .row {
+    max-width: 1200px;
+}
+footer span a {
+    color: rgb(204, 204, 204);
+}
+footer img {
+    height: 35px;
+}
+/**************** 태블릿 ****************/
+@media (min-width: 768px) {
+    header {
+        height: auto;
+        transition: all 0.5s;
+    }
+    header:hover {
+        box-shadow: 0px 10px 10px -10px #444;
+    }
+    .menu {
+        width: auto;
+        height: 5em;
+        line-height: 5em;
+        position: inherit;
+        box-shadow: none;   
+        background-color: #fff;
+        font-weight: 500;
+    }
+    .menu li:hover {
+        background-color: #f5f5f5;
+    }
+}
+/**************** 데스크탑 ****************/
+@media (min-width: 992px) {
+
+
+
+}
+/**************** 데스크탑 xl ****************/
+@media (min-width: 1200px) {
+    .contents img {
+        height: 180px;
+    }
+
+
+}

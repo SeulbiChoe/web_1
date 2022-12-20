@@ -1,0 +1,18 @@
+
+
+.content-wrap .swiper-button-next::after,
+.content-wrap .swiper-button-prev::after {
+    display: none;
+}
+
+@media (min-width:768px) {
+
+}
+@media (min-width:992px) {
+    .sub-banner {
+        height: 25em;
+    }
+    .txt-img {
+        height: auto;
+    }
+}
