@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보성여관 예약</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
+    <script src="fullcalendar/lib/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script><!-- Swiper CDN -->
+
+    <!-- DateRangePicker CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/><!-- Swiper CDN -->
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fullcalendar/lib/main.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <div id="wrap" class="reservation">
+        <header>
+            <div class="container-fluid px-0 h-100">
+                <div class="row mx-0 justify-content-between align-items-center h-100">
+                    <div class="col-4 ps-lg-4">
+                        <button class="bg-white px-3 py-2">예약조회</button>
+                    </div>
+                    <div class="col-4">
+                        <img src="img/boseong_logo.png" alt="" class="w-100 h-100">
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+        </header>
+        <div class="step py-3 py-lg-0 d-flex">
+            <p class="text-white mb-0 text-center text-lg-start title py-lg-4 px-lg-4">BOOKING</p>
+            <div class="d-none d-lg-flex py-lg-4 px-lg-4">
+                <span class="text-white">일정 / 객실 검색 > </span>
+                <span class="ms-lg-2">결제 > </span>
+                <span class="ms-lg-2">예약신청완료</span>
+            </div>
+        </div>
+        <div class="top-title py-3 py-lg-0 d-none d-lg-flex">
+            <p class="text-white mb-0 text-center text-lg-start title py-lg-4 px-lg-4">SELECT DATES</p>
+            <p class="text-white mb-0 py-lg-4 px-lg-4">희망하는 숙박일정부터 선택하기</p>
+        </div>
+        <!-- 캘린더 영역 -->
+        <section class="cal-section py-4 px-3">
+            <div class="inner p-2">
+                <div class="border border-dark p-2">
+                    <div class="cal-wrap position-relative">
+                        <input type="text" id="calendar" class="d-none"></input>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 캘린더 선택 후 콘텐츠 영역 -->
+        <section class="content py-3">
+            <div class="inner container-fluid px-0">
+                <div class="row mx-auto item">
+                    <div class="col-12 col-lg-8 pt-3">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/boseong_img_11.jpg" alt="" class="w-100 h-100"></div>
+                                <div class="swiper-slide"><img src="img/boseong_img_12.jpg" alt="" class="w-100 h-100"></div>
+                                <div class="swiper-slide"><img src="img/boseong_img_13.jpg" alt="" class="w-100 h-100"></div>
+                                <div class="swiper-slide"><img src="img/boseong_img_14.jpg" alt="" class="w-100 h-100"></div>
+                            </div>
+                            <div class="swiper-button-next d-none d-lg-block"></div>
+                            <div class="swiper-button-prev d-none d-lg-block"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 py-4 px-3">
+                        <div class="inner border-top border-bottom border-3 border-dark py-5 py-lg-3">
+                            <div class="top">
+                                <h2 class="fw-bold">칠곡고택 안채</h2>
+                                <p class="text-secondary">기본형</p>
+                            </div>
+                            <div class="mid">
+                                <p>
+                                    서울에서 가장 오래된 골목 뒤에 위치한 작은 한옥입니다. 
+                                    여럿이 함께할 수 있는 툇마루와 고요한 휴식을 도와주는 침실, 
+                                    일상의 피로를 덜어주는 욕탕에서 새로운 휴식을 경험해보세요.
+                                </p>
+                                <div class="room-info text-secondary">
+                                    <p class="mb-0">체크인 18:00 / 체크아웃 14:00</p>
+                                    <p class="mb-0">기준 인원 4 / 최대 인원 4</p>
+                                    <p class="mb-0">객실면적 42.98㎡</p>
+                                    <p class="mb-0">퀸 침대 2</p>
+                                </div>
+                                <div class="room-price border-top border-1 mt-3 pt-3">
+                                    <p class="fs-3 fw-bold text-center">￦280,000</p>
+                                </div>
+                            </div>
+                            <div class="btm">
+                                <button class="border-0 bg-dark text-white w-100 py-3">Booking</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 상세보기 -->
+            <div class="inner container-fluid px-3 px-md-4 mt-3 py-3 py-lg-5">
+                <div class="room-detail border-top border-bottom border-3 border-dark">
+                    <div class="row mx-0 py-3">
+                        <div class="col-12 col-md-3 top">
+                            <h3 class="fw-normal fs-4">칠곡고택 안채</h3>
+                            <p class="text-secondary">기본형</p>
+                            <div class="room-info text-secondary">
+                                <p class="mb-0">체크인 18:00 / 체크아웃 14:00</p>
+                                <p class="mb-0">기준 인원 4 / 최대 인원 4</p>
+                                <p class="mb-0">객실면적 42.98㎡</p>
+                                <p class="mb-0">퀸 침대 2</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-9">
+                            <div class="py-3 border-bottom border-1">
+                                <p class="mb-0">
+                                    서울에서 가장 오래된 골목 뒤에 위치한 작은 한옥입니다. 
+                                    여럿이 함께할 수 있는 툇마루와 고요한 휴식을 도와주는 침실, 
+                                    일상의 피로를 덜어주는 욕탕에서 새로운 휴식을 경험해보세요.
+                                </p>
+                            </div>
+                            <div class="py-3 border-bottom border-1 d-lg-flex">
+                                <h6>FACILITY</h6>
+                                <div class="img-wrap d-flex">
+                                    <div class="d-flex align-items-center flex-column me-3">
+                                        <div class="img-box"></div>
+                                        <p class="mb-0 mt-2 text-secondary">정원</p>
+                                    </div>
+                                    <div class="d-flex align-items-center flex-column me-3">
+                                        <div class="img-box"></div>
+                                        <p class="mb-0 mt-2 text-secondary">독립화장실</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-3 border-bottom border-1 d-lg-flex">
+                                <h6>SERVICE</h6>
+                            </div>
+                            <div class="py-3 border-bottom border-1 d-lg-flex">
+                                <h6>AMENITY</h6>
+                                <span class="pe-2">샴푸</span>
+                                <span class="px-2">샴푸</span>
+                                <span class="px-2">샴푸</span>
+                                <span class="px-2">샴푸</span>
+                                <span class="px-2">샴푸</span>
+                                <span class="px-2">샴푸</span>
+                                <span class="px-2">샴푸</span>
+                            </div>
+                            <div class="py-3 border-bottom border-1 d-lg-flex">
+                                <h6>EQUIPMENT</h6>
+                                <span class="pe-2">WIFI</span>
+                                <span class="px-2">냉난방기</span>
+                                <span class="px-2">미니냉장고</span>
+                            </div>
+                            <div class="py-3 d-lg-flex">
+                                <h6>OPTIONS</h6>
+                                <span class="pe-2">복순도가</span>
+                                <span class="px-2">샴푸</span>
+                                <span class="px-2">샴푸</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="d-flex d-lg-none align-items-center text-secondary text-decoration-none px-3 more-btn">상세보기 <span class="ms-auto"></span> </a>
+            </div>
+        </section>
+        <script type="text/javascript">
+            var swiper = new Swiper(".content .swiper", {
+                loop: true,
+                pagination: {
+                  el: ".swiper-pagination",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            $('.more-btn').click(function(){
+                $('.room-detail').toggleClass('show');
+                $(this).toggleClass('show-more-btn');
+            });
+
+          </script>
+        <!-- 환불 규정 영역 -->
+        <section class="refund-section p-4 pt-5 p-md-5"> <!-- refurn-section을 refund-section으로 바꿔주세요 -->
+            <div class="container-fluid px-0">
+                <div class="row mx-0">
+                    <div class="col-12 col-md-2">
+                        <h5 class="fw-bold">환불규정</h5>
+                    </div>
+                    <div class="col-12 col-md-9 col-lg-10 ms-md-auto table-wrap"> <!-- col-lg-10 을 추가해주세요 -->
+                        <p class="text-secondary mb-0">숙박 예약 변경은 1회만 가능하며, 변경 후 개인적인 사유로 인한 숙박 취소시 숙박비는 환불 되지 않습니다.</p>
+                        <p class="text-secondary mb-0">환불 발생시 농협을 제외한 타은행일 경우 이체수수료 500원 발생됩니다.</p>
+                        <div class="mt-4">
+                            <h6 class="d-flex align-items-center py-2">성수기</h6>
+                            <table class="table text-center align-middle table-bordered border-dark">
+                                <thead class="text-center align-middle">
+                                    <tr>
+                                        <th rowspan="2" style="width: 35%;">구분</th>
+                                        <th colspan="2">주중</th>
+                                    </tr>
+                                    <tr>
+                                        <th>소비자 귀책</th>
+                                        <th>사업자 귀책</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>사용예정일 10일 전까지 취소 <br>
+                                            또는 계약체결당일 취소</td>
+                                        <td colspan="2">계약금 환급(100% 환급)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            7일 전까지 취소</td>
+                                        <td>총요금의 10% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 10% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            5일 전까지 취소</td>
+                                        <td>총요금의 30% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 30% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            3일 전까지 취소</td>
+                                        <td>총요금의 50% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 50% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 1일 전까지 <br>
+                                            또는 사용예정일 당일 취소</td>
+                                        <td>총요금의 80% 공제 후 환급</td>
+                                        <td>손해배상</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr>
+                            <table class="table text-center align-middle table-bordered border-dark">
+                                <thead class="text-center align-middle">
+                                    <tr>
+                                        <th rowspan="2" style="width: 35%;">구분</th>
+                                        <th colspan="2">주말</th>
+                                    </tr>
+                                    <tr>
+                                        <th>소비자 귀책</th>
+                                        <th>사업자 귀책</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>사용예정일 10일 전까지 취소 <br>
+                                            또는 계약체결당일 취소</td>
+                                        <td colspan="2">계약금 환급(100% 환급)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            7일 전까지 취소</td>
+                                        <td>총요금의 20% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 20% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            5일 전까지 취소</td>
+                                        <td>총요금의 40% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 40% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            3일 전까지 취소</td>
+                                        <td>총요금의 60% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 60% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 1일 전까지 <br>
+                                            또는 사용예정일 당일 취소</td>
+                                        <td>총요금의 90% 공제 후 환급</td>
+                                        <td>손해배상</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-4">
+                            <h6 class="d-flex align-items-center py-2">비수기</h6>
+                            <table class="table text-center align-middle table-bordered border-dark">
+                                <thead class="text-center align-middle">
+                                    <tr>
+                                        <th rowspan="2" style="width: 35%;">구분</th>
+                                        <th colspan="2">주중</th>
+                                    </tr>
+                                    <tr>
+                                        <th>소비자 귀책</th>
+                                        <th>사업자 귀책</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            2일 전까지 취소</td>
+                                        <td colspan="2">계약금 환급(100% 환급)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            1일 전까지 취소</td>
+                                        <td>총요금의 10% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 10% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 당일 취소 <br>
+                                            또는 연락 없이 불참</td>
+                                        <td>총요금의 20% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 20% 배상</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr>
+                            <table class="table text-center align-middle table-bordered border-dark">
+                                <thead class="text-center align-middle">
+                                    <tr>
+                                        <th rowspan="2" style="width: 35%;">구분</th>
+                                        <th colspan="2">주말</th>
+                                    </tr>
+                                    <tr>
+                                        <th>소비자 귀책</th>
+                                        <th>사업자 귀책</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            2일 전까지 취소</td>
+                                        <td colspan="2">계약금 환급(100% 환급)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            1일 전까지 취소</td>
+                                        <td>총요금의 20% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 20% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 당일 취소 <br>
+                                            또는 연락 없이 불참</td>
+                                        <td>총요금의 30% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 30% 배상</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="js/daterange.js"></script>
+<script type="text/javascript">
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 1) {
+            // $('header').addClass('fixed-top');
+        }
+        else if (scroll == 0) {
+            // $('header').removeClass('fixed-top');
+        }
+    });
+
+    //달력
+    var today = moment();
+
+    $(function() {
+        $('#calendar').daterangepicker({
+            parentEl: ".cal-wrap",
+            "locale": {
+                startOfWeek: 'sunday',
+                "format": "YYYY-MM-DD",
+                "separator": " ~ ",
+                "applyLabel": "확인",
+                "cancelLabel": "취소",
+                "fromLabel": "From",
+                "toLabel": "To",
+                "customRangeLabel": "Custom",
+                "weekLabel": "W",
+                "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
+                "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+            },
+            alwaysShowCalendars: true,
+            autoApply :true,
+            inline: true,
+            "minDate": today, //추가됨
+        });
+    });
+</script>
+</html>
