@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보성여관</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script><!-- Swiper CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- DateRangePicker CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.css">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/><!-- Swiper CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/> <!-- 폰트어썸 아이콘 -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <!-- 모바일 -->
+            <nav class="fixed-top mb-top-nav d-lg-none">
+                <div class="container-fluid h-100">
+                    <div class="row mx-0 align-items-center w-100 h-100">
+                        <div class="col-5">
+                            <a href="index.html" class="top-logo d-inline-block"><img src="img/boseong_logo.png" alt="" class="w-100 h-100"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="fixed-bottom mb-btm-nav border-top d-lg-none">
+                <div class="container-fluid px-0 h-100">
+                    <div class="row mx-0 h-100">
+                        <ul class="navbar-nav flex-row text-center">
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link" href="intro.html"><span>소개</span></a></li>
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link" href="story.html"><span>둘러보기</span></a></li>
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link" href="fee.html"><span>이용/예약</span></a></li>
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link" href="notice.html"><span>게시판</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- 데스크탑 -->
+            <nav class="fixed-top dt-nav d-none d-lg-block h-auto">
+                <div class="container-fluid h-100 px-4">
+                    <div class="row mx-auto flex-row h-100 w-100 align-items-center">
+                        <a href="index.html" class="top-logo w-auto"><img src="img/boseong_logo.png" alt="" class="w-100 h-100"></a>
+                        <ul class="navbar-nav flex-row w-auto flex-grow-1">
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="intro.html">소개</a></li>
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="story.html">둘러보기</a></li>
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="fee.html">이용/예약</a></li>
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="notice.html">게시판</a></li>
+                            <li class="nav-item ms-auto"><a class="nav-link position-relative" href="reservation.html"> <span><i class="fas fa-calendar-alt me-1"></i></span> 예약조회</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- 배너 영역 -->
+        <div class="main-banner-wrap">
+            <div class="banner-inner">
+                <div class="swiper main-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            <div class="txt-wrap px-3">
+                                <strong class="d-block py-4 fs-4">세월을 담은 공간에서 꿈을 꾸다</strong>
+                                <p class="mb-0">문학적, 역사적 주요한 거점으로써 가치를 지닌</p>
+                                <p>보성여관과 함께 해보세요.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide2">
+                            <div class="txt-wrap px-3">
+                                <strong class="d-block py-4 fs-4">문학과 하룻밤을 지내다</strong>
+                                <p class="mb-0">문학적, 역사적 주요한 거점으로써 가치를 지닌</p>
+                                <p>보성여관과 함께 해보세요.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide3">
+                            <div class="txt-wrap px-3">
+                                <strong class="d-block py-4 fs-4">근대문화재에서의 하룻밤</strong>
+                                <p class="mb-0">문학적, 역사적 주요한 거점으로써 가치를 지닌</p>
+                                <p>보성여관과 함께 해보세요.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide4">
+                            <div class="txt-wrap px-3">
+                                <strong class="d-block py-4 fs-4">따뜻한 茶 한잔으로 태백산맥을 생각하다</strong>
+                                <p class="mb-0">문학적, 역사적 주요한 거점으로써 가치를 지닌</p>
+                                <p>보성여관과 함께 해보세요.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide5">
+                            <div class="txt-wrap px-3">
+                                <strong class="d-block py-4 fs-4">세월을 담은 공간에서 꿈을 꾸다</strong>
+                                <p class="mb-0">문학적, 역사적 주요한 거점으로써 가치를 지닌</p>
+                                <p>보성여관과 함께 해보세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination d-none d-lg-block"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var swiper = new Swiper(".main-swiper", {
+                loop: true,
+                effect : 'fade',
+                centeredSlides: true,
+                speed : 1000,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+        <!-- 배너 영역 끝 -->
+
+        <!-- 플로팅 버튼 시작 -->
+        <div class="float-btn px-2">
+            <div class="btn-box px-2">
+                <a class="d-flex justify-content-end align-items-center text-decoration-none py-3" href="reservation.html">
+                    <span>예약하기</span>
+                    <i class="fas fa-calendar-plus me-1 position-relative"></i>
+                </a>
+            </div>
+            <div class="btn-box px-2">
+                <a class="d-flex justify-content-end align-items-center text-decoration-none py-3" href="#">
+                    <span class="me-3">문화유산국민신탁</span>
+                    <i class="far fa-window-maximize me-1 position-relative"></i>
+                </a>
+            </div>
+            <div class="btn-box px-2">
+                <a class="d-flex justify-content-end align-items-center text-decoration-none py-3" href="#">
+                    <span class="me-3">문화유산보전플랫폼</span>
+                    <i class="far fa-window-maximize me-1 position-relative"></i>
+                </a>
+            </div>
+        </div>
+        <div class="float-btn-plus">
+            <a class="d-block w-100 h-100 rounded-circle position-relative" href="javascript:;">
+                <span class="d-block"></span>
+                <span class="d-block"></span>
+            </a>
+        </div>
+        <!-- 플로팅 버튼 끝 -->
+
+        <!-- 메인 영역 container -->
+        <div id="container">
+            <!-- 예약 영역 -->
+            <section class="reserve my-5">
+                <div class="btn-wrap">
+                    <button class="border-0 mx-auto d-flex justify-content-center align-items-start bg-transparent" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">날짜를 선택해주세요. <span class="ms-1 mt-1"></span></button>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header border-0 pt-4">
+                                <!-- 닫기 버튼 -->
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <input id="dtDatepicker" class="d-none"></input>
+                            </div>
+                            <div class="modal-footer border-0 pb-4">
+                                <button type="button" class="bg-transparent border-0 text-decoration-underline fw-bold reset-btn">선택날짜 지우기</button><!-- reset-btn클래스가 추가됨 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script src="js/daterange.js"></script>
+            <script type="text/javascript">
+                var today = moment();
+
+                $(function() {
+                    $('#dtDatepicker').daterangepicker({
+                        parentEl: ".modal-body",
+                        "locale": {
+                            startOfWeek: 'sunday',
+                            "format": "MM-DD",
+                            "separator": " ~ ",
+                            "applyLabel": "확인",
+                            "cancelLabel": "취소",
+                            "fromLabel": "From",
+                            "toLabel": "To",
+                            "customRangeLabel": "Custom",
+                            "weekLabel": "W",
+                            "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
+                            "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+                        },
+                        alwaysShowCalendars: true,
+                        autoApply :true,
+                        inline: true,
+                        "minDate": today, //추가됨
+                    });
+                });
+
+                //추가됨
+                $('.reset-btn').click(function(){
+                    $('.calendar-table table td').removeClass('active');
+                    $('.calendar-table table td').removeClass('start-date');
+                    $('.calendar-table table td').removeClass('end-date');
+                    $('.calendar-table table td').removeClass('in-range');
+                })
+            </script>
+            <!-- 예약 영역 끝 -->
+
+            <!-- 룸 소개 영역 시작-->
+            <section class="room position-relative">
+                <div class="inner text-center text-lg-start py-5 px-lg-4">
+                    <h3 class="fw-bold position-relative">ROOM</h3>
+                    <p class="my-5">전통 한옥의 매력이 깃든 방</p>
+                </div>
+                <div class="room-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="img-box mx-auto shadow position-relative">
+                                    <img src="img/boseong_img_12.jpg" alt="" class="w-100 h-100">
+                                    <div class="text-wrap text-white text-start py-2 py-lg-3 px-3 px-lg-4">
+                                        <div class="d-flex name">
+                                            <p class="mb-0">칠곡고택 안채</p>
+                                            <span class="ms-auto">￦280,000~</span>
+                                        </div>
+                                        <div class="opacity-50">
+                                            <p class="mb-1">기본형</p>
+                                        </div>
+                                        <div class="d-flex mt-lg-4">
+                                            <p class="mb-0">기준 4명 (최대 4명) <span class="mx-2">&#8226;</span> 침구 2개</p>
+                                            <a href="reservation.html" class="ms-auto text-white">예약하기</a>
+                                        </div>                  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="img-box mx-auto shadow position-relative">
+                                    <img src="img/boseong_img_12.jpg" alt="" class="w-100 h-100">
+                                    <div class="text-wrap text-white text-start py-2 py-lg-3 px-3 px-lg-4">
+                                        <div class="d-flex name">
+                                            <p class="mb-0">칠곡고택 안채</p>
+                                            <span class="ms-auto">￦280,000~</span>
+                                        </div>
+                                        <div class="opacity-50">
+                                            <p class="mb-1">기본형</p>
+                                        </div>
+                                        <div class="d-flex mt-lg-4">
+                                            <p>기준 4명 (최대 4명) <span class="mx-2">&#8226;</span> 침구 2개</p>
+                                            <a href="reservation.html" class="ms-auto text-white">예약하기</a>
+                                        </div>                  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next d-none d-lg-block"></div>
+                        <div class="swiper-button-prev d-none d-lg-block"></div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                var swiper = new Swiper(".room-slider .swiper", {
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                });
+            </script>
+            <!-- 룸 소개 영역 끝-->
+
+            <!-- About 영역 -->
+            <section class="about p-3 p-md-4">
+                <h3 class="fw-bold py-2 mt-5 mt-lg-0">ABOUT</h3>
+                <hr>
+                <div class="container-fluid px-0">
+                    <div class="row mx-0 gy-5">
+                        <div class="content col-12 col-md-6 px-0 pe-md-2">
+                            <div class="swiper about-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background: url(img/boseong_img_01.jpg) center no-repeat; background-size: cover;"></div>
+                                    <div class="swiper-slide" style="background: url(img/boseong_img_02.jpg) center no-repeat; background-size: cover;"></div>
+                                    <div class="swiper-slide" style="background: url(img/boseong_img_03.jpg) center no-repeat; background-size: cover;"></div>
+                                    <div class="swiper-slide" style="background: url(img/boseong_img_04.jpg) center no-repeat; background-size: cover;"></div>
+                                    <div class="swiper-slide" style="background: url(img/boseong_img_05.jpg) center no-repeat; background-size: cover;"></div>
+                                </div>
+                            </div>
+                            <div class="text-center text-md-start pt-3">
+                                <p class="fw-bold fs-6 mb-2">보성여관</p>
+                                <p class="mb-2 mb-md-4">전통 한옥의 건축미와 현대적 편리함의 조화</p>
+                                <button class="border-0 px-3 px-md-0 py-2 bg-white text-decoration-underline" onclick="location.href='reservation.html'">예약하기</button>
+                            </div>
+                        </div>
+                        <div class="content col-12 col-md-6 px-0 pe-md-2">
+                            <div class="swiper about-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background: url(img/boseong_img_08.jpg) center no-repeat; background-size: cover;"></div>
+                                    <div class="swiper-slide" style="background: url(img/boseong_img_09.jpg) center no-repeat; background-size: cover;"></div>
+                                    <div class="swiper-slide" style="background: url(img/boseong_img_10.jpg) center no-repeat; background-size: cover;"></div>
+                                    <div class="swiper-slide" style="background: url(img/boseong_img_15.jpg) center no-repeat; background-size: cover;"></div>
+                                    <div class="swiper-slide" style="background: url(img/boseong_img_16.jpg) center no-repeat; background-size: cover;"></div>
+                                </div>
+                            </div>
+                            <div class="text-center text-md-start pt-3">
+                                <p class="fw-bold fs-6 mb-2">태백산맥 둘레길</p>
+                                <p class="mb-2 mb-md-4">전통 한옥의 건축미와 현대적 편리함의 조화</p>
+                                <button class="border-0 px-3 px-md-0 py-2 bg-white text-decoration-underline" onclick="location.href='story.html'">더보기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                var pdSwiper = new Swiper(".about-swiper", {
+                    loop: true,
+                    centeredSlides: true,
+                    speed : 700,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                });
+            </script>
+            <!-- About 영역 끝-->
+
+            <!-- boseng 영역 시작 -->
+            <section class="boseong p-3 my-5">
+                <h3 class="fw-bold py-2 mt-5 mt-lg-0">BOSEONG</h3>
+                <hr>
+                <div class="inner">
+                    <div class="img-box top position-relative">
+                        <img src="img/boseong_drawing.jpg" alt="" class="w-100 h-100">
+                    </div>
+                </div>
+                <div class="container-fluid px-0 mt-3 inner">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-auto px-0 text-center flex-grow-1">
+                            <div class="img-box btm">
+                                <img src="img/cafe.jpg" alt="" class="w-100 h-100">
+                            </div> 
+                            <p class="py-2">카페</p>
+                        </div>
+                        <div class="col-12 col-md-auto px-0 text-center flex-grow-1 mx-md-2">
+                            <div class="img-box btm">
+                                <img src="img/normal_room.jpg" alt="" class="w-100 h-100">
+                            </div> 
+                            <p class="py-2">다다미방</p>
+                        </div>
+                        <div class="col-12 col-md-auto px-0 text-center flex-grow-1">
+                            <div class="img-box btm">
+                                <img src="img/dadami_room.jpg" alt="" class="w-100 h-100">
+                            </div> 
+                            <p class="py-2">온돌방</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid px-0 mt-5">
+                    <div class="row mx-0">
+                        <div class="col-12 col-md-6 px-0">
+                            <img src="img/보성여관_그림.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="col-12 col-md-6 px-0">
+                            <img src="img/보성여관_소개_손글씨.jpg" alt="" class="w-100 h-100">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- 메인 영역 container 끝 -->
+        <!-- 푸터 영역 -->
+        <footer>
+            <div class="map w-100">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13097.963875225554!2d127.3433333!3d34.8438889!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc252da766c858ea1!2z67O07ISx7Jes6rSA!5e0!3m2!1sko!2skr!4v1663663542723!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="container-fluid py-4">
+                <div class="row mx-0">
+                    <div class="footer-md-left col-12 col-md-5 px-0">
+                        <div class="row mx-0">
+                            <p class="footer-title d-none d-md-block fs-5 fw-bold text-white">CONTACT</p>
+                            <div class="col-12 text-white d-flex align-items-center">
+                                <div class="footer-icon py-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <p class="mb-0">전라남도 보성군 벌교읍 태백산맥길 19</p>
+                            </div>
+                            <div class="col-12 text-white d-flex">
+                                <div class="footer-icon py-1 d-inline">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="d-inline">
+                                    <p class="mb-0">전화:061-858-7528</p>
+                                    <p class="mb-0">팩스:061-858-7529</p>
+                                </div>
+                            </div>
+                            <div class="col-12 text-white py-1" style="padding-left: 42px;">
+                                <p class="mb-0">사업자등록번호 416-82-20056</p>
+                                <p class="mb-0">통신판매업신고번호 제2013-4890073-30-00017</p>
+                            </div>
+                            <div class="col-12 d-none d-md-flex flex-row mt-2 footer-icon-wrap" style="padding-left: 42px;">
+                                <span class="d-flex justify-content-center align-items-center rounded-circle me-3"><i class="fab fa-instagram text-white"></i></span>
+                                <span class="d-flex justify-content-center align-items-center rounded-circle"><i class="fab fa-facebook-f text-white"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-none d-md-block pe-0">
+                        <p class="footer-title fs-5 fw-bold text-white">SITE MAP</p>
+                        <a href="#" class="d-block text-white text-decoration-none pb-1">보성여관 소개</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">보성여관 둘러보기</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">보성여관 이용/예약</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">태백산맥 둘레기 이야기</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">보성 주변 관광지</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">게시판</a>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block position-relative">
+                        <p class="footer-title fs-5 fw-bold text-white">INFORMATION</p>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">환불규정</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w-100 bg-light ps-2 py-1 py-md-2">
+                <div class="w-100 mx-auto" style="max-width: 1200px;">
+                    <small>Copyrightⓒ The National Trust for Cultural Heritage. All Rights Reserved.</small>
+                </div>
+            </div>
+            <div class="w-100 bg-white bottom-logo text-center py-2 d-md-none">
+                <img src="img/boseong_logo.png" class="me-4">
+                <img src="img/logo_b.png">
+            </div>
+        </footer>
+    </div>
+    <!-- 아이디 wrap 끝 -->
+    <script type="text/javascript">
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            if (scroll > 1) {
+                $('#wrap').addClass('scroll');
+                $('.mb-top-nav').addClass('scroll');
+                $('.dt-nav').addClass('scroll');
+            }
+            else if (scroll == 0) {
+                $('#wrap').removeClass('scroll');
+                $('.mb-top-nav').removeClass('scroll');
+                $('.dt-nav').removeClass('scroll');
+            }
+        });
+
+        //플로팅 버튼
+        $(".float-btn-plus").click(function(){
+            $(".float-btn").toggle(300);
+        })
+
+        $('.ui-datepicker-calendar td').click(function(e){
+            $(e).addClass('startDate');
+        })
+    </script>
+</body>
+</html>
