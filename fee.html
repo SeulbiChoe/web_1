@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보성여관 - 이용/예약</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script><!-- Swiper CDN -->
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/> <!-- 폰트어썸 아이콘 -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/><!-- Swiper CDN -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <!-- 모바일 -->
+            <nav class="fixed-top mb-top-nav d-lg-none">
+                <div class="container-fluid h-100">
+                    <div class="row mx-0 align-items-center w-100 h-100">
+                        <div class="col-5">
+                            <a href="index.html" class="top-logo d-inline-block"><img src="img/boseong_logo.png" alt="" class="w-100 h-100"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="fixed-bottom mb-btm-nav border-top d-lg-none">
+                <div class="container-fluid px-0 h-100">
+                    <div class="row mx-0 h-100">
+                        <ul class="navbar-nav flex-row text-center">
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link" href="intro.html"><span>소개</span></a></li>
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link" href="story.html"><span>둘러보기</span></a></li>
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link active" href="fee.html"><span>이용/예약</span></a></li>
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link" href="notice.html"><span>게시판</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- 데스크탑 -->
+            <nav class="fixed-top dt-nav d-none d-lg-block h-auto">
+                <div class="container-fluid h-100 px-4">
+                    <div class="row mx-auto flex-row h-100 w-100 align-items-center">
+                        <a href="index.html" class="top-logo w-auto"><img src="img/boseong_logo.png" alt="" class="w-100 h-100"></a>
+                        <ul class="navbar-nav flex-row w-auto flex-grow-1">
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="intro.html">소개</a></li>
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="story.html">둘러보기</a></li>
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="fee.html">이용/예약</a></li>
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="notice.html">게시판</a></li>
+                            <li class="nav-item ms-auto"><a class="nav-link position-relative" href="reservation.html"> <span><i class="fas fa-calendar-alt me-1"></i></span> 예약조회</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- 메인 영역 container -->
+        <div id="container" class="rooms">
+            <!-- 서브 배너 -->
+            <div class="sub-banner"></div>
+
+            <div class="content container-fluid my-5">
+                <div class="container-fluid">
+                    <div class="row inner">
+                        <div class="col-12 px-0 text-center py-4">
+                            <h5>객실 보기</h5>
+                        </div>
+                        <div class="col-12 px-0 position-relative item1">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide px-2 position-relative">
+                                        <div class="img-box">
+                                            <img src="img/fee_1.jpg" alt="" class="w-100 h-100">
+                                        </div>
+                                        <div class="position-absolute txt-box bg-white px-4 py-5 shadow">
+                                            <h4 class="fs-5">제석산</h4>
+                                            <p>온돌방 / 2-3인 / 150,000원</p>
+                                            <ul class="ps-0 mb-0">
+                                                <li>2인 기준 인원 추가시 추가요금</li>
+                                                <li>입실시간 15:00 이후 가능</li>
+                                                <li>(인원 수 대로 이불과 수건이 준비됩니다.)</li>
+                                            </ul>
+                                            <a href="reservation.html" class="d-block text-decoration-underline text-secondary mt-3">예약하기</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide px-2 position-relative">
+                                        <div class="img-box">
+                                            <img src="img/boseong_img_13.jpg" alt="" class="w-100 h-100">
+                                        </div>
+                                        <div class="position-absolute txt-box bg-white px-4 py-5 shadow">
+                                            <h4 class="fs-5">오봉산</h4>
+                                            <p>온돌방 / 2-3인 / 150,000원</p>
+                                            <ul class="ps-0 mb-0">
+                                                <li>2인 기준 인원 추가시 추가요금</li>
+                                                <li>입실시간 15:00 이후 가능</li>
+                                                <li>1인 추가시 10,000원(기준 : 2명, 최대 : 3명)</li>
+                                                <li>(인원 수 대로 이불과 수건이 준비됩니다.)</li>
+                                            </ul>
+                                            <a href="reservation.html" class="d-block text-decoration-underline text-secondary mt-3">예약하기</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide px-2 position-relative">
+                                        <div class="img-box">
+                                            <img src="img/boseong_img_14.jpg" alt="" class="w-100 h-100">
+                                        </div>
+                                        <div class="position-absolute txt-box bg-white px-4 py-5 shadow">
+                                            <h4 class="fs-5">일림산</h4>
+                                            <p>온돌방 / 2-3인 / 150,000원</p>
+                                            <ul class="ps-0 mb-0">
+                                                <li>2인 기준 인원 추가시 추가요금</li>
+                                                <li>입실시간 15:00 이후 가능</li>
+                                                <li>1인 추가시 10,000원(기준 : 2명, 최대 : 3명)</li>
+                                                <li>(인원 수 대로 이불과 수건이 준비됩니다.)</li>
+                                            </ul>
+                                            <a href="reservation.html" class="d-block text-decoration-underline text-secondary mt-3">예약하기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination position-absolute"></div>
+                        </div>
+                        <div class="col-12 px-0 text-center py-4">
+                            <h5>대관 보기</h5>
+                        </div>
+                        <div class="col-12 px-0 position-relative item2">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide px-2 position-relative">
+                                        <div class="img-box">
+                                            <img src="img/boseong_img_16.jpg" alt="" class="w-100 h-100">
+                                        </div>
+                                        <div class="position-absolute txt-box bg-white px-4 py-5 shadow">
+                                            <h4 class="fs-5">전체 대관</h4>
+                                            <ul class="ps-0 mb-0">
+                                                <li>금액(단위 : 원) : 1,270,000</li>
+                                                <li>기준 : 1일 기준 (기타 4~8시간 기준)</li>
+                                            </ul>
+                                            <a href="reservation.html" class="d-block text-decoration-underline text-secondary mt-3">예약하기</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide px-2 position-relative">
+                                        <div class="img-box">
+                                            <img src="img/boseong_img_17.jpg" alt="" class="w-100 h-100">
+                                        </div>
+                                        <div class="position-absolute txt-box bg-white px-4 py-5 shadow">
+                                            <h4 class="fs-5">1층 대관 (숙박동)</h4>
+                                            <ul class="ps-0 mb-0">
+                                                <li>금액(단위 : 원) : 670,000</li>
+                                                <li>기준 : 1일, 15명 기준 (7개실)</li>
+                                            </ul>
+                                            <a href="reservation.html" class="d-block text-decoration-underline text-secondary mt-3">예약하기</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide px-2 position-relative">
+                                        <div class="img-box">
+                                            <img src="img/cafe.jpg" alt="" class="w-100 h-100">
+                                        </div>
+                                        <div class="position-absolute txt-box bg-white px-4 py-5 shadow">
+                                            <h4 class="fs-5">1층 대관 (소극장)</h4>
+                                            <ul class="ps-0 mb-0">
+                                                <li>금액(단위 : 원) : 50,000</li>
+                                                <li>기준 : 1시간 기준 (최대 4시간)</li>
+                                            </ul>
+                                            <a href="reservation.html" class="d-block text-decoration-underline text-secondary mt-3">예약하기</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide px-2 position-relative">
+                                        <div class="img-box">
+                                            <img src="img/dadami_room.jpg" alt="" class="w-100 h-100">
+                                        </div>
+                                        <div class="position-absolute txt-box bg-white px-4 py-5 shadow">
+                                            <h4 class="fs-5">2층 대관 (다다미방)</h4>
+                                            <ul class="ps-0 mb-0">
+                                                <li>금액(단위 : 원) : 100,000</li>
+                                                <li>기준 : 1시간, 30명 기준 (2층 4개실)</li>
+                                            </ul>
+                                            <a href="reservation.html" class="d-block text-decoration-underline text-secondary mt-3">예약하기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination position-absolute"></div>
+                        </div>
+                        <hr class="mt-5">
+                        <div class="col-12">
+                            <table class="table align-middle">
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center" style="width: 15%;">비고</th>
+                                        <td class="py-4">
+                                            <ul class="ps-2 lh-lg">
+                                                <li>매주 월요일은 휴관입니다.</li>
+                                                <li>입실은 15:00시 이후, 퇴실은 다음날 오전 11:00시 이전입니다.</li>
+                                                <li>소극장, 다다미방 대관이나 전체 대관은 전화 (061-858-7528)로 문의하여 주시기 바랍니다.</li>
+                                                <li>개별 공간 대관 가능</li>
+                                                <li>1층 대관(숙박동) : 7개실, 80,000원~150,000원</li>
+                                                <li>7세 이상부터 1인 추가시 : 10,000원 (인원수대로 이불과 수건이 준비됩니다.)</li>
+                                                <li>무통장입금 : 농협 301-0120-6954-51 (예금주 : 보성여관)</li>
+                                                <li>하절기 성수기 : 7월 1일~8월 31일</li>
+                                                <li>동절기 성수기 : 12월 1일~2월 말일</li>
+                                                <li>주말은 금요일, 토요일, 공휴일이 해당됩니다.</li>
+                                                <li class="text-danger fw-bold">숙박 예약 변경은 1회만 가능하며, 변경 후 개인적인 사유로 인한 숙박 취소시 숙박비는 환불 되지않습니다.</li>
+                                                <li class="text-danger fw-bold">보성여관 무료 주차장 안내
+                                                    <ul class="text-dark fw-normal">
+                                                        <li>벌교 신협앞 태백산맥 문학거리 공용 주차장</li>
+                                                        <li>금융조합 앞 공용 주차장</li>
+                                                        <li>벌교 읍사무소 광장 주차장</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table align-middle">
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center" style="width: 15%;">할인 안내</th>
+                                        <td class="py-4">
+                                            <ul class="ps-2 lh-lg">
+                                                <li>문화유산국민신탁 회원 20% 할인
+                                                    <ul>
+                                                        <li>문화유산국민신탁 회원가입은 문화유산국민신탁 홈페이지(nationaltrustkorea.org)를 통해 하실 수 있습니다.</li>
+                                                        <li>당월 회원 가입자는 숙박요금 20% 할인 적용에서 제외 되오니 참조하시기 바랍니다.</li>
+                                                        <li>단, 당월 가입자가 숙박요금 할인을 원할 경우 연회비 전액 납부시에 가능합니다.
+                                                            <br>예) 회비 약정금액이 월 10,000원일 경우 120,000원을, 5,000원일 경우 60,000원을 납부하시면 할인 가능.
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>단체 10% 할인</li>
+                                                <li>장애인 50% 할인</li>
+                                                <li>2박 이상 하실 경우에 이불을 교체하지 않고 그대로 사용하실 경우 1인당 1만원 할인이 됩니다.
+                                                    <br>예) 1동 2명 이 2박3일 예약을 할 경우 원래 가격 : 20만원
+                                                    <br>이불을 교체하지 않고 그대로 사용 할 경우 : 18만원이 됨.
+                                                </li>
+                                                <li>숙박시 회원카드나 본인확인이 가능한 신분증을 지참하셔야 됩니다.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var swiper1 = new Swiper(".item1 .swiper", {
+                        loop: true,
+                        centeredSlides: true,
+                        pagination: {
+                            el: ".item1 .swiper-pagination",
+                            type: "progressbar",
+                        },
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 30,
+                            },
+                            992: {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                            }
+                        }
+                    });
+
+                    var swiper2 = new Swiper(".item2 .swiper", {
+                        loop: true,
+                        centeredSlides: true,
+                        pagination: {
+                            el: ".item2 .swiper-pagination",
+                            type: "progressbar",
+                        },
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 30,
+                            },
+                            992: {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                            }
+                        }
+                    });
+                </script>
+                <!-- 관람시간 -->
+                <div class="row mx-auto mt-5 sightseeing">
+                    <div class="col-12 p-3">
+                        <h5 class="text-danger">관람시간</h5>
+                        <ul class="ps-0 mb-0">
+                            <li>10:00~17:00</li>
+                            <li>오전 10시~오후 4시 30분까지 입장가능</li>
+                            <li>오후 5시까지 관람가능</li>
+                        </ul>
+                        <div class="mt-5">
+                            <h5 class="text-danger">입장료</h5>
+                            <h6 class="mb-0 py-2">- 기본 입장료</h6>
+                            <table class="table table-bordered border-dark text-center align-middle w-100">
+                                <thead class="align-middle">
+                                    <tr>
+                                        <th rowspan="3" style="width: 20%;">구분</th>
+                                        <th class="py-2" style="width: 20%;">유형</th>
+                                        <th colspan="2" style="width: 60%;">입장료(기본)</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="py-2">서비스</th>
+                                        <th colspan="2">관람</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="py-2">구분</th>
+                                        <th>개인</th>
+                                        <th>단체(15인 이상)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="4">관광객</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 fw-bold">일반</td>
+                                        <td>1,000</td>
+                                        <td>800</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 fw-bold">청소년</td>
+                                        <td>800</td>
+                                        <td>600</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 fw-bold">어린이</td>
+                                        <td>500</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">국민신탁 회원</th>
+                                        <td colspan="2">무료</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">주민</th>
+                                        <td colspan="2">무료</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr>
+                            <h6 class="mb-0 py-2">- 선택 입장료</h6>
+                            <table class="table table-bordered border-dark text-center align-middle w-100">
+                                <thead class="align-middle">
+                                    <tr>
+                                        <th rowspan="3" style="width: 20%;">구분</th>
+                                        <th class="py-2" style="width: 20%;">유형</th>
+                                        <th colspan="2" style="width: 60%;">입장료(선택)</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="py-2">서비스</th>
+                                        <th colspan="2">관람(입장료 기본) + 음료제공</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="py-2">구분</th>
+                                        <th>개인</th>
+                                        <th>단체(15인 이상)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="4">관광객</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 fw-bold">일반</td>
+                                        <td>4,000</td>
+                                        <td>3,800</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 fw-bold">청소년</td>
+                                        <td>3,800</td>
+                                        <td>3,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 fw-bold">어린이</td>
+                                        <td>3,500</td>
+                                        <td>3,300</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">국민신탁 회원</th>
+                                        <td colspan="2">2,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">주민</th>
+                                        <td colspan="2">3,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-4">
+                            <table class="table border-top align-middle">
+                                <tbody>
+                                    <tr>
+                                        <th class="text-center">면제 및 할인</th>
+                                        <td class="py-4">
+                                            <ul class="ps-2 mb-0 lh-lg">
+                                                <li>숙박 이용객의 경우 입장료 면제</li>
+                                                <li>문화유산국민신탁 회원의 경우 입장료 면제</li>
+                                                <li>기타 시설 및 프로그램 이용료 할인은 내부 규정에 따름</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">무료 관람 (입장료 면제)</th>
+                                        <td class="py-4">
+                                            <ul class="ps-2 mb-0 lh-lg">
+                                                <li>지역 주민 (보성군에 주소를 둔 주민)</li>
+                                                <li>만 6세 이하 어린이 (미취학아동)</li>
+                                                <li>65세 이상 어르신</li>
+                                                <li>장애인복지법에 의한 장애인</li>
+                                                <li>국가유공자등예우및지원에관한법률에 의한 국가유공자 1인만 해당</li>
+                                                <li>참전유공자예우에관한법률에 의한 참전유공자</li>
+                                                <li>국군의 날에 입장하는 군인, 경찰의 날에 입장하는 경찰관, 어린이 날에 입장하는 어린이</li>
+                                                <li>국민기초생활보장법에 의한 기초생활수급자</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center">대상 기준</th>
+                                        <td class="py-4">
+                                            <ul class="ps-2 mb-0 lh-lg">
+                                                <li>일반 : 성인 (만 19세~64세)</li>
+                                                <li>청소년 : 중·고등학생 (만 13세~만 18세)</li>
+                                                <li>어린이 : 초등학생 (만 7세~만 12세)</li>
+                                                <li>주민 : 주민등록 상 본주거지가 보성군인 자</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 환급기준 -->
+                <div class="row mx-auto mt-5 refund">
+                    <div class="col-12 p-3">
+                        <h5 class="text-danger">환급기준</h5>
+                        <ul class="ps-0 mb-0 text-danger">
+                            <li>숙박 예약 변경은 1회만 가능하며, 변경 후 개인적인 사유로 인한 숙박 취소시 숙박비는 환불 되지 않습니다.</li>
+                            <li>환불 발생시 농협을 제외한 타은행일 경우 이체수수료 500원 발생됩니다.</li>
+                        </ul>
+                        <div class="mt-4">
+                            <h6 class="mb-0 py-2">- 성수기</h6>
+                            <table class="table text-center align-middle table-bordered border-dark">
+                                <thead class="text-center align-middle">
+                                    <tr>
+                                        <th rowspan="2" style="width: 35%;">구분</th>
+                                        <th colspan="2">주중</th>
+                                    </tr>
+                                    <tr>
+                                        <th>소비자 귀책</th>
+                                        <th>사업자 귀책</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>사용예정일 10일 전까지 취소 <br>
+                                            또는 계약체결당일 취소</td>
+                                        <td colspan="2">계약금 환급(100% 환급)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            7일 전까지 취소</td>
+                                        <td>총요금의 10% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 10% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            5일 전까지 취소</td>
+                                        <td>총요금의 30% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 30% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            3일 전까지 취소</td>
+                                        <td>총요금의 50% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 50% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 1일 전까지 <br>
+                                            또는 사용예정일 당일 취소</td>
+                                        <td>총요금의 80% 공제 후 환급</td>
+                                        <td>손해배상</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr>
+                            <table class="table text-center align-middle table-bordered border-dark">
+                                <thead class="text-center align-middle">
+                                    <tr>
+                                        <th rowspan="2" style="width: 35%;">구분</th>
+                                        <th colspan="2">주말</th>
+                                    </tr>
+                                    <tr>
+                                        <th>소비자 귀책</th>
+                                        <th>사업자 귀책</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>사용예정일 10일 전까지 취소 <br>
+                                            또는 계약체결당일 취소</td>
+                                        <td colspan="2">계약금 환급(100% 환급)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            7일 전까지 취소</td>
+                                        <td>총요금의 20% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 20% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            5일 전까지 취소</td>
+                                        <td>총요금의 40% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 40% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            3일 전까지 취소</td>
+                                        <td>총요금의 60% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 60% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 1일 전까지 <br>
+                                            또는 사용예정일 당일 취소</td>
+                                        <td>총요금의 90% 공제 후 환급</td>
+                                        <td>손해배상</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-5">
+                            <h6 class="mb-0 py-2">- 비수기</h6>
+                            <table class="table text-center align-middle table-bordered border-dark">
+                                <thead class="text-center align-middle">
+                                    <tr>
+                                        <th rowspan="2" style="width: 35%;">구분</th>
+                                        <th colspan="2">주중</th>
+                                    </tr>
+                                    <tr>
+                                        <th>소비자 귀책</th>
+                                        <th>사업자 귀책</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            2일 전까지 취소</td>
+                                        <td colspan="2">계약금 환급(100% 환급)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            1일 전까지 취소</td>
+                                        <td>총요금의 10% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 10% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 당일 취소 <br>
+                                            또는 연락 없이 불참</td>
+                                        <td>총요금의 20% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 20% 배상</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr>
+                            <table class="table text-center align-middle table-bordered border-dark">
+                                <thead class="text-center align-middle">
+                                    <tr>
+                                        <th rowspan="2" style="width: 35%;">구분</th>
+                                        <th colspan="2">주말</th>
+                                    </tr>
+                                    <tr>
+                                        <th>소비자 귀책</th>
+                                        <th>사업자 귀책</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            2일 전까지 취소</td>
+                                        <td colspan="2">계약금 환급(100% 환급)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 <br>
+                                            1일 전까지 취소</td>
+                                        <td>총요금의 20% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 20% 배상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>사용예정일 당일 취소 <br>
+                                            또는 연락 없이 불참</td>
+                                        <td>총요금의 30% 공제 후 환급</td>
+                                        <td>계약금 환급 및 총요금의 30% 배상</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 메인 영역 container 끝 -->
+        <!-- 푸터 영역 -->
+        <footer>
+            <div class="map w-100">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13097.963875225554!2d127.3433333!3d34.8438889!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc252da766c858ea1!2z67O07ISx7Jes6rSA!5e0!3m2!1sko!2skr!4v1663663542723!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="container-fluid py-4">
+                <div class="row mx-0">
+                    <div class="footer-md-left col-12 col-md-5 px-0">
+                        <div class="row mx-0">
+                            <p class="footer-title d-none d-md-block fs-5 fw-bold text-white">CONTACT</p>
+                            <div class="col-12 text-white d-flex align-items-center">
+                                <div class="footer-icon py-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <p class="mb-0">전라남도 보성군 벌교읍 태백산맥길 19</p>
+                            </div>
+                            <div class="col-12 text-white d-flex">
+                                <div class="footer-icon py-1 d-inline">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="d-inline">
+                                    <p class="mb-0">전화:061-858-7528</p>
+                                    <p class="mb-0">팩스:061-858-7529</p>
+                                </div>
+                            </div>
+                            <div class="col-12 text-white py-1" style="padding-left: 42px;">
+                                <p class="mb-0">사업자등록번호 416-82-20056</p>
+                                <p class="mb-0">통신판매업신고번호 제2013-4890073-30-00017</p>
+                            </div>
+                            <div class="col-12 d-none d-md-flex flex-row mt-2 footer-icon-wrap" style="padding-left: 42px;">
+                                <span class="d-flex justify-content-center align-items-center rounded-circle me-3"><i class="fab fa-instagram text-white"></i></span>
+                                <span class="d-flex justify-content-center align-items-center rounded-circle"><i class="fab fa-facebook-f text-white"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-none d-md-block pe-0">
+                        <p class="footer-title fs-5 fw-bold text-white">SITE MAP</p>
+                        <a href="#" class="d-block text-white text-decoration-none pb-1">보성여관 소개</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">보성여관 둘러보기</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">보성여관 이용/예약</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">태백산맥 둘레기 이야기</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">보성 주변 관광지</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">게시판</a>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block position-relative">
+                        <p class="footer-title fs-5 fw-bold text-white">INFORMATION</p>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">환불규정</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w-100 bg-light ps-2 py-1 py-md-2">
+                <div class="w-100 mx-auto" style="max-width: 1200px;">
+                    <small>Copyrightⓒ The National Trust for Cultural Heritage. All Rights Reserved.</small>
+                </div>
+            </div>
+            <div class="w-100 bg-white bottom-logo text-center py-2 d-md-none">
+                <img src="img/boseong_logo.png" class="me-4">
+                <img src="img/logo_b.png">
+            </div>
+        </footer>
+    </div>
+    <!-- wrap 끝 -->
+    <script type="text/javascript">
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            if (scroll > 1) {
+                $('#wrap').addClass('scroll');
+                $('.mb-top-nav').addClass('scroll');
+                $('.dt-nav').addClass('scroll');
+            }
+            else if (scroll == 0) {
+                $('#wrap').removeClass('scroll');
+                $('.mb-top-nav').removeClass('scroll');
+                $('.dt-nav').removeClass('scroll');
+            }
+        });
+    </script>
+</body>
+</html>
