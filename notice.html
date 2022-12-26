@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보성여관 - 게시판 - 공지사항</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/> <!-- 폰트어썸 아이콘 -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <!-- 모바일 -->
+            <nav class="fixed-top mb-top-nav d-lg-none">
+                <div class="container-fluid h-100">
+                    <div class="row mx-0 align-items-center w-100 h-100">
+                        <div class="col-5">
+                            <a href="index.html" class="top-logo d-inline-block"><img src="img/boseong_logo.png" alt="" class="w-100 h-100"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="fixed-bottom mb-btm-nav border-top d-lg-none">
+                <div class="container-fluid px-0 h-100">
+                    <div class="row mx-0 h-100">
+                        <ul class="navbar-nav flex-row text-center">
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link" href="intro.html"><span>소개</span></a></li>
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link" href="story.html"><span>둘러보기</span></a></li>
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link" href="fee.html"><span>이용/예약</span></a></li>
+                            <li class="nav-item d-flex flex-column justify-content-center"><a class="nav-link active" href="notice.html"><span>게시판</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- 데스크탑 -->
+            <nav class="fixed-top dt-nav d-none d-lg-block h-auto">
+                <div class="container-fluid h-100 px-4">
+                    <div class="row mx-auto flex-row h-100 w-100 align-items-center">
+                        <a href="index.html" class="top-logo w-auto"><img src="img/boseong_logo.png" alt="" class="w-100 h-100"></a>
+                        <ul class="navbar-nav flex-row w-auto flex-grow-1">
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="intro.html">소개</a></li>
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="story.html">둘러보기</a></li>
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="fee.html">이용/예약</a></li>
+                            <li class="nav-item"><a class="nav-link px-3 position-relative" href="notice.html">게시판</a></li>
+                            <li class="nav-item ms-auto"><a class="nav-link position-relative" href="reservation.html"> <span><i class="fas fa-calendar-alt me-1"></i></span> 예약조회</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- 메인 영역 container -->
+        <div id="container" class="notice">
+            <!-- 서브 배너 시작 -->
+            <div class="sub-banner"></div>
+            <!-- 서브 배너 끝 -->
+            <!-- 콘텐츠 시작 -->
+            <div class="content container-fluid my-5">
+                <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item text-center" role="presentation">
+                        <button class="nav-link w-100 rounded-0 py-2 px-0 active" id="pills-notice-tab" data-bs-toggle="pill" data-bs-target="#pills-notice" type="button" role="tab" aria-controls="pills-notice" aria-selected="true">공지사항</button>
+                    </li>
+                    <li class="nav-item text-center ms-1" role="presentation">
+                        <button class="nav-link w-100 rounded-0 px-0 py-2" id="pills-review-tab" data-bs-toggle="pill" data-bs-target="#pills-review" type="button" role="tab" aria-controls="pills-review" aria-selected="false">이용 후기</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- 공지사항 탭 시작 -->
+                    <div class="tab-pane fade show active" id="pills-notice" role="tabpanel" aria-labelledby="pills-notice-tab" tabindex="0">
+                        <!-- 상단 부분 -->
+                        <div class="container-fluid px-0 top">
+                            <div class="w-100 mx-auto">
+                                <form action="" class="d-flex justify-content-center">
+                                    <label for="" class="pt-4 flex-grow-1">
+                                        <select name="" id="" class="form-select rounded-0 w-100">
+                                            <option value="">제목</option>
+                                            <option value="">내용</option>
+                                            <option value="">제목+내용</option>
+                                            <option value="">회원아이디</option>
+                                            <option value="">작성자</option>
+                                        </select>
+                                    </label>
+                                    <label for="" class="py-4 ms-2 flex-grow-1">
+                                        <input type="text" class="form-control rounded-0 w-100">
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="container-fluid px-0 list">
+                            <div class="row mx-0">
+                                <div class="col-12 table-responsive-md fs-6 table-wrap p-2 py-md-3">
+                                    <table class="table text-center align-middle">
+                                        <thead class="align-middle">
+                                            <tr>
+                                                <th class="py-3">번호</th>
+                                                <th>제목</th>
+                                                <th>작성자</th>
+                                                <th>등록일</th>
+                                                <th>조회수</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="py-3">공지</td>
+                                                <td>
+                                                    <a href="#" class="text-decoration-none">쾌적한 숙박 환경을 위한 유의사항</a>
+                                                </td>
+                                                <td>보성여관</td>
+                                                <td>2014-03-20</td>
+                                                <td>7667</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3">120</td>
+                                                <td>
+                                                    <a href="#" class="text-decoration-none">[채용] 보성여관 영업직 직원 채용 최종합격자 발표 최종합격자 최종합격자 최종합격자</a>
+                                                </td>
+                                                <td>보성여관</td>
+                                                <td>2022-05-31</td>
+                                                <td>318</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3">119</td>
+                                                <td>
+                                                    <a href="#" class="text-decoration-none">[채용] 보성여관 영업직 직원 공개 채용</a>
+                                                </td>
+                                                <td>보성여관</td>
+                                                <td>2022-05-10</td>
+                                                <td>221</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3">118</td>
+                                                <td>
+                                                    <a href="#" class="text-decoration-none">[채용] 보성여관 영업직 직원 공개 채용 재연장 공고</a>
+                                                </td>
+                                                <td>보성여관</td>
+                                                <td>2014-03-20</td>
+                                                <td>7667</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3">117</td>
+                                                <td>
+                                                    <a href="#" class="text-decoration-none">2021 보성여관 생생문화재 프로그램 안내</a>
+                                                </td>
+                                                <td>보성여관</td>
+                                                <td>2014-03-20</td>
+                                                <td>7667</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3">116</td>
+                                                <td>
+                                                    <a href="#" class="text-decoration-none">보성여관 휴관 안내</a>
+                                                </td>
+                                                <td>보성여관</td>
+                                                <td>2014-03-20</td>
+                                                <td>7667</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3">115</td>
+                                                <td>
+                                                    <a href="#" class="text-decoration-none">쾌적한 숙박 환경을 위한 유의사항</a>
+                                                </td>
+                                                <td>보성여관</td>
+                                                <td>2014-03-20</td>
+                                                <td>7667</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3">114</td>
+                                                <td>
+                                                    <a href="#" class="text-decoration-none">쾌적한 숙박 환경을 위한 유의사항</a>
+                                                </td>
+                                                <td>보성여관</td>
+                                                <td>2014-03-20</td>
+                                                <td>7667</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3">113</td>
+                                                <td>
+                                                    <a href="#" class="text-decoration-none">2020년 보성여관 생생문화재사업 '문화의 가치를 더하는 보성여관' 프로그램 진행</a>
+                                                </td>
+                                                <td>보성여관</td>
+                                                <td>2014-03-20</td>
+                                                <td>7667</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3">112</td>
+                                                <td>
+                                                    <a href="#" class="text-decoration-none">보성여관 휴관 연장 안내</a>
+                                                </td>
+                                                <td>보성여관</td>
+                                                <td>2014-03-20</td>
+                                                <td>7667</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 페이지네이션 -->
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination pagination justify-content-center">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active" aria-curreview="page"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 이용 후기 탭 시작 -->
+                    <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab" tabindex="0">
+                        <!-- 상단 부분 -->
+                        <div class="container-fluid px-0 top">
+                            <div class="w-100 mx-auto">
+                                <form action="" class="d-flex justify-content-center">
+                                    <label for="" class="pt-4 flex-grow-1">
+                                        <select name="" id="" class="form-select rounded-0 w-100">
+                                            <option value="">제목</option>
+                                            <option value="">내용</option>
+                                            <option value="">제목+내용</option>
+                                            <option value="">회원아이디</option>
+                                            <option value="">작성자</option>
+                                        </select>
+                                    </label>
+                                    <label for="" class="py-4 ms-2 flex-grow-1">
+                                        <input type="text" class="form-control rounded-0 w-100">
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="container-fluid px-0 inner review">
+                            <div class="row mx-auto gy-3 mt-3">
+                                <div class="col-12 col-md-6 col-lg-4 px-0">
+                                    <div class="item-box position-relative mx-auto">
+                                        <img src="img/boseong_img_14.jpg" alt="" class="w-100 h-100">
+                                        <div class="position-absolute w-100 h-auto text-white p-3">
+                                            <h6 class="d-block">차분하고 고운 하룻밤 이었습니다.^^ 너무 잘 쉬다 갑니다.</h6>
+                                            <p class="mb-0">가족들과 조용하고 차분한 하룻밤을 잘 보내고 갑니다. 역사속 하룻밤을 보내며 차분하게 지낼 수 있는 좋은 경험이 되었습니다. 하룻밤을 보내며 차분하게 지낼 수 있어서 좋았습니다.!</p>
+                                            <span class="d-block mt-3">@idname</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 px-0">
+                                    <div class="item-box position-relative mx-auto">
+                                        <img src="img/boseong_img_15.jpg" alt="" class="w-100 h-100">
+                                        <div class="position-absolute w-100 h-auto text-white p-3">
+                                            <h6 class="d-block">차분하고 고운 하룻밤 이었습니다.^^ 너무 잘 쉬다 갑니다.</h6>
+                                            <p class="mb-0">가족들과 조용하고 차분한 하룻밤을 잘 보내고 갑니다. 역사속 하룻밤을 보내며 차분하게 지낼 수 있는 좋은 경험이 되었습니다. 하룻밤을 보내며 차분하게 지낼 수 있어서 좋았습니다.!</p>
+                                            <span class="d-block mt-3">@idname</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 px-0">
+                                    <div class="item-box position-relative mx-auto">
+                                        <img src="img/boseong_img_16.jpg" alt="" class="w-100 h-100">
+                                        <div class="position-absolute w-100 h-auto text-white p-3">
+                                            <h6 class="d-block">차분하고 고운 하룻밤 이었습니다.^^ 너무 잘 쉬다 갑니다.</h6>
+                                            <p class="mb-0">가족들과 조용하고 차분한 하룻밤을 잘 보내고 갑니다. 역사속 하룻밤을 보내며 차분하게 지낼 수 있는 좋은 경험이 되었습니다. 하룻밤을 보내며 차분하게 지낼 수 있어서 좋았습니다.!</p>
+                                            <span class="d-block mt-3">@idname</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 px-0">
+                                    <div class="item-box position-relative mx-auto">
+                                        <img src="img/boseong_img_17.jpg" alt="" class="w-100 h-100">
+                                        <div class="position-absolute w-100 h-auto text-white p-3">
+                                            <h6 class="d-block">차분하고 고운 하룻밤 이었습니다.^^ 너무 잘 쉬다 갑니다.</h6>
+                                            <p class="mb-0">가족들과 조용하고 차분한 하룻밤을 잘 보내고 갑니다. 역사속 하룻밤을 보내며 차분하게 지낼 수 있는 좋은 경험이 되었습니다. 하룻밤을 보내며 차분하게 지낼 수 있어서 좋았습니다.!</p>
+                                            <span class="d-block mt-3">@idname</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 px-0">
+                                    <div class="item-box position-relative mx-auto">
+                                        <img src="img/boseong_img_15.jpg" alt="" class="w-100 h-100">
+                                        <div class="position-absolute w-100 h-auto text-white p-3">
+                                            <h6 class="d-block">차분하고 고운 하룻밤 이었습니다.^^ 너무 잘 쉬다 갑니다.</h6>
+                                            <p class="mb-0">가족들과 조용하고 차분한 하룻밤을 잘 보내고 갑니다. 역사속 하룻밤을 보내며 차분하게 지낼 수 있는 좋은 경험이 되었습니다. 하룻밤을 보내며 차분하게 지낼 수 있어서 좋았습니다.!</p>
+                                            <span class="d-block mt-3">@idname</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 px-0">
+                                    <div class="item-box position-relative mx-auto">
+                                        <img src="img/boseong_img_14.jpg" alt="" class="w-100 h-100">
+                                        <div class="position-absolute w-100 h-auto text-white p-3">
+                                            <h6 class="d-block">차분하고 고운 하룻밤 이었습니다.^^ 너무 잘 쉬다 갑니다.</h6>
+                                            <p class="mb-0">가족들과 조용하고 차분한 하룻밤을 잘 보내고 갑니다. 역사속 하룻밤을 보내며 차분하게 지낼 수 있는 좋은 경험이 되었습니다. 하룻밤을 보내며 차분하게 지낼 수 있어서 좋았습니다.!</p>
+                                            <span class="d-block mt-3">@idname</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 px-0">
+                                    <div class="item-box position-relative mx-auto">
+                                        <img src="img/boseong_img_16.jpg" alt="" class="w-100 h-100">
+                                        <div class="position-absolute w-100 h-auto text-white p-3">
+                                            <h6 class="d-block">차분하고 고운 하룻밤 이었습니다.^^ 너무 잘 쉬다 갑니다.</h6>
+                                            <p class="mb-0">가족들과 조용하고 차분한 하룻밤을 잘 보내고 갑니다. 역사속 하룻밤을 보내며 차분하게 지낼 수 있는 좋은 경험이 되었습니다. 하룻밤을 보내며 차분하게 지낼 수 있어서 좋았습니다.!</p>
+                                            <span class="d-block mt-3">@idname</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 px-0">
+                                    <div class="item-box position-relative mx-auto">
+                                        <img src="img/boseong_img_17.jpg" alt="" class="w-100 h-100">
+                                        <div class="position-absolute w-100 h-auto text-white p-3">
+                                            <h6 class="d-block">차분하고 고운 하룻밤 이었습니다.^^ 너무 잘 쉬다 갑니다.</h6>
+                                            <p class="mb-0">가족들과 조용하고 차분한 하룻밤을 잘 보내고 갑니다. 역사속 하룻밤을 보내며 차분하게 지낼 수 있는 좋은 경험이 되었습니다. 하룻밤을 보내며 차분하게 지낼 수 있어서 좋았습니다.!</p>
+                                            <span class="d-block mt-3">@idname</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 px-0">
+                                    <div class="item-box position-relative mx-auto">
+                                        <img src="img/boseong_img_14.jpg" alt="" class="w-100 h-100">
+                                        <div class="position-absolute w-100 h-auto text-white p-3">
+                                            <h6 class="d-block">차분하고 고운 하룻밤 이었습니다.^^ 너무 잘 쉬다 갑니다.</h6>
+                                            <p class="mb-0">가족들과 조용하고 차분한 하룻밤을 잘 보내고 갑니다. 역사속 하룻밤을 보내며 차분하게 지낼 수 있는 좋은 경험이 되었습니다. 하룻밤을 보내며 차분하게 지낼 수 있어서 좋았습니다.!</p>
+                                            <span class="d-block mt-3">@idname</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 페이지네이션 -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination pagination justify-content-center mt-4">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active" aria-curreview="page"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 메인 영역 container 끝 -->
+        <!-- 푸터 영역 -->
+        <footer>
+            <div class="map w-100">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13097.963875225554!2d127.3433333!3d34.8438889!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc252da766c858ea1!2z67O07ISx7Jes6rSA!5e0!3m2!1sko!2skr!4v1663663542723!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="container-fluid py-4">
+                <div class="row mx-0">
+                    <div class="footer-md-left col-12 col-md-5 px-0">
+                        <div class="row mx-0">
+                            <p class="footer-title d-none d-md-block fs-5 fw-bold text-white">CONTACT</p>
+                            <div class="col-12 text-white d-flex align-items-center">
+                                <div class="footer-icon py-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <p class="mb-0">전라남도 보성군 벌교읍 태백산맥길 19</p>
+                            </div>
+                            <div class="col-12 text-white d-flex">
+                                <div class="footer-icon py-1 d-inline">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="d-inline">
+                                    <p class="mb-0">전화:061-858-7528</p>
+                                    <p class="mb-0">팩스:061-858-7529</p>
+                                </div>
+                            </div>
+                            <div class="col-12 text-white py-1" style="padding-left: 42px;">
+                                <p class="mb-0">사업자등록번호 416-82-20056</p>
+                                <p class="mb-0">통신판매업신고번호 제2013-4890073-30-00017</p>
+                            </div>
+                            <div class="col-12 d-none d-md-flex flex-row mt-2 footer-icon-wrap" style="padding-left: 42px;">
+                                <span class="d-flex justify-content-center align-items-center rounded-circle me-3"><i class="fab fa-instagram text-white"></i></span>
+                                <span class="d-flex justify-content-center align-items-center rounded-circle"><i class="fab fa-facebook-f text-white"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-none d-md-block pe-0">
+                        <p class="footer-title fs-5 fw-bold text-white">SITE MAP</p>
+                        <a href="#" class="d-block text-white text-decoration-none pb-1">보성여관 소개</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">보성여관 둘러보기</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">보성여관 이용/예약</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">태백산맥 둘레기 이야기</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">보성 주변 관광지</a>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">게시판</a>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block position-relative">
+                        <p class="footer-title fs-5 fw-bold text-white">INFORMATION</p>
+                        <a href="#" class="d-block text-white text-decoration-none py-1">환불규정</a>
+                        <div class="footer-right-img position-absolute bottom-0 w-100 text-end align-text-bottom">
+                            <img src="img/boseong_logo.png" class="d-block ms-auto mb-3">
+                            <img src="img/logo_b_w.png">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w-100 bg-light ps-2 py-1 py-md-2">
+                <div class="w-100 mx-auto" style="max-width: 1200px;">
+                    <small>Copyrightⓒ The National Trust for Cultural Heritage. All Rights Reserved.</small>
+                </div>
+            </div>
+            <div class="w-100 bg-white bottom-logo text-center py-2 d-md-none">
+                <img src="img/boseong_logo.png" class="me-4">
+                <img src="img/logo_b.png">
+            </div>
+        </footer>
+    </div>
+    <!-- wrap 끝 -->
+    <script type="text/javascript">
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            if (scroll > 1) {
+                $('#wrap').addClass('scroll');
+                $('.mb-top-nav').addClass('scroll');
+                $('.dt-nav').addClass('scroll');
+            }
+            else if (scroll == 0) {
+                $('#wrap').removeClass('scroll');
+                $('.mb-top-nav').removeClass('scroll');
+                $('.dt-nav').removeClass('scroll');
+            }
+        });
+    </script>
+</body>
+</html>
